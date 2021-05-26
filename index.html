@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yelo Sabit | Yelo Bank</title>
+    <link rel="stylesheet" type = text/css href="index.css" />
+  </head>
+  <body>
+    <div class="table">
+
+      <table>
+        <tbody id="tableBody">
+          <tr>
+            <th>
+              <div class="th-content">
+                <div class="th-item">Müddət</div>
+              </div>
+            </th>
+            <th>
+              <span class="deposit-currency">AZN</span>
+              <div class="th-content">
+                <div class="th-item">Faizlərin aylıq ödənişi</div>
+                <div class="th-item">Müddətin sonunda</div>
+              </div>
+            </th>
+            <th>
+              <span class="deposit-currency">USD</span>
+              <div class="th-content">
+                <div class="th-item">Faizlərin aylıq ödənişi</div>
+                <div class="th-item">Müddətin sonunda</div>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-content">
+                <div class="td-item">12 ay</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">11%</div>
+                <div class="td-item">11.5%</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">1.5%</div>
+                <div class="td-item">2%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-content">
+                <div class="td-item">24 ay</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">11%</div>
+                <div class="td-item">11.5%</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">1.5%</div>
+                <div class="td-item">2%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="td-content">
+                <div class="td-item">36 ay</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">11%</div>
+                <div class="td-item">11.5%</div>
+              </div>
+            </td>
+            <td>
+              <div class="td-content">
+                <div class="td-item">1.5%</div>
+                <div class="td-item">2%</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="calculation-part">
+      <div class="dc-title">
+        <p>Əmanət kalkulyatoru</p>
+        <b>Gəlirini hesabla</b>
+      </div>
+      <div class="deposit-calc">
+        <div class="dc-input">
+          <div class="amount-item item">
+            <p>Emanet Meblegi</p>
+            <span class="range-result">50000</span>          
+            <input type="range" min="100" max="100000" step="100" value="50000" style="--min: 100; --max: 100000;" class="range">   
+          <div class="currency-type">AZN</div>
+          </div>
+          <div class="term-item item">
+            <p>Muddet</p>
+            <span class="range-result-1">24</span>           
+            <input type="range" min="12" max="36" step="12" value="24" style="--min: 12; --max: 36;" class="range-one">            
+            <div class="term-type">Ay</div>
+
+
+          </div>
+          <div class="currency-item item">
+            <p>Valyuta</p>
+            <select class="select-currency" id="selectCurrency">
+              <option value="0">AZN</option>
+              <option value="1">USD</option>
+            </select>
+          </div>
+        </div>
+          <div class="calc-type">
+            <div class="monthly">Ayliq</div>
+            <label class="toggle">
+              <input id="toggleswitch" type="checkbox">
+              <span class="roundbutton"></span>
+            </label>
+            <div class="end">Muddetin sonunda</div>
+          </div>
+          <div class="result">
+            <div class="result-item">
+              <p>Umumi faiz geliri</p>
+              <b id="depositAmount">
+                11000
+
+              </b>
+              <span class="azn">AZN</span>
+            </div>
+            <div class="result-item  monthlyItem">
+              <p>Ayliq faiz geliri</p>
+              <b id="depositAmountMonth"> 
+                458.33
+              </b>
+              <span class="monthAzn">AZN</span>
+            </div>
+            <div class="result-item">
+              <p>Illik faiz derecesi</p>
+              <b id="depositPercent">
+                11
+                <span>%</span>
+              </b>
+            </div>
+
+          </div>
+          
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+:root{
+    --orange: #FFC628;
+    --grey: rgba(0,0,0,0.5);
+    --light-grey: #ececec;
+    --border-color: #e7e7e7;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=range] {
+    width: 100%;
+    outline: none;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    left: -2px;
+    bottom: -5px;
+    -webkit-appearance: none;
+    background: var(--orange);
+    
+} 
+
+
+
+
+
+
+input[type=range]::-webkit-slider-thumb {
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 100%;
+    -webkit-appearance: none;
+    background: #FFFFFF;
+    border: 5px solid var(--orange);
+    margin: -10px 0 0 0;
+    cursor: pointer;
+} 
+ */
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+.table{
+    width: 1024px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--light-grey);
+    width: 100%;
+    margin: 20px 0;
+}
+table th{
+    border-right: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    position: relative;
+    font-weight: normal;
+
+}
+table td{
+    border-right: 1px solid var(--light-grey);
+
+}
+
+  
+table tr {
+    text-align: left;
+}
+
+table tr:last-child td {
+    padding: 0 0 15px 0;
+}
+
+table tr:nth-child(2) td{
+    padding: 15px 0 0 0;
+}
+
+.th-content, .td-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    height: 60px;
+    padding: 0 15px;
+}
+.th-item{
+    color: var(--grey);
+    width: 100%;
+}
+.td-item{
+    width: 100%;
+}
+
+.td-content{
+    height: 40px;
+    padding: 0 15px;
+}
+.deposit-currency{
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    padding: 5px 0;
+    top: -20px;
+    background-color: var(--orange);
+    color: black;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+/* second part */
+.calculation-part{
+    margin: 0 0 50px 0;
+    padding: 0 0 50px 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+.deposit-calc{
+    max-width: 790px;
+    /* width: 100%; */
+    margin: 0 auto;
+}
+
+.dc-title{
+    width: 100%;
+    text-align: center;
+}
+.dc-title p{
+    color: var(--grey);
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.dc-title b{
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    font-size: 25px;
+    display: block;
+}
+
+.dc-input{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 10px 0;
+    border: 1px solid var(--border-color);
+    height: 70px;
+}
+
+.currency-type{
+    position: absolute;
+    font-size: 15px;
+    color: var(--grey);
+    right: 17px;
+    bottom: 20px;
+    line-height: 15px;
+}
+
+.term-type{
+    position: absolute;
+    font-size: 15px;
+    color: var(--grey);
+    right: 17px;
+    bottom: 20px;
+    line-height: 15px;
+}
+
+
+.item{
+    padding: 10px;
+    position: relative;
+    width: 50%;
+
+}
+.amount-item{
+    border-right: 1px solid var(--border-color);
+
+}
+
+
+
+.item p{
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 15px;
+    display: block;
+    margin: 0 0 4px 0;
+}
+
+
+
+.currency-item{
+    border-left: 1px solid var(--border-color);
+}
+
+
+select, input {
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+
+}
+
+.calc-type{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    position: relative;
+    padding: 40px 0 0 0;
+}
+
+.monthly{
+    text-align: right;
+    width: calc(50% - 40px);
+}
+
+.end{
+    text-align: left;
+    width: calc(50% - 40px);
+
+
+}
+
+/* toggle button */
+
+.toggle {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    margin: 0 0 0 -25px;
+    display:inline-block;
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #f1f1f1;
+}
+
+.roundbutton{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: var(--orange);
+    border-radius: 100%;
+    display: block;
+    transition: all 0.3s;
+    top: 2px;
+    left: 3px;
+    cursor: pointer;
+}
+
+input:checked + .roundbutton {
+    transform: translate(20px, 0);
+} 
+.toggle input{
+    display: none;
+}
+
+
+.result{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 45px auto 0;
+}
+
+.result p{
+    color: var(--grey);
+    line-height: 22px;
+    margin: 0;
+}
+
+.result span{
+    font-size: 15px;
+}
+
+.result b{
+    font-weight: normal;
+    font-size: 25px;
+}
+.result .result-item{
+    width: 100%;
+}
+
+.result-item:nth-child(1){
+    text-align: right;
+    padding: 0 30px 0 0;
+}
+
+.result-item:nth-child(2){
+    text-align: center;
+    padding: 0 60px;
+    border-right: 1px solid var(--light-grey);
+    border-left: 1px solid var(--light-grey);
+}
+
+
+.result-item:nth-child(3){
+    padding: 0 0 0 30px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+    .table{
+        padding: 30px 0 0;
+    }
+
+    table{
+        width: 700px;
+    }
+
+    .calculation-part{
+        margin: 0 0 30px 0;
+        padding: 0 0 30px 0;
+        border: none;
+    }
+
+    .dc-input{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .item{
+        width: auto;
+    }
+
+    .amount-item{
+        border: none;
+    }
+
+    .term-item{
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    input[type=range] {
+        background: rgba(0,0,0, 0.1);
+    }
+
+    .result{
+        display: block;
+        width: 100%;
+        margin: 15px 0 auto;
+    }
+
+    .result-item{
+        text-align: center !important;
+        padding: 20px 0 20px !important;
+        margin: 0px !important;
+    }
+
+    .result-item:nth-child(2){
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    }
+   
+
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
